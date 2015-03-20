@@ -1,0 +1,5 @@
+Voici un fichier texte
+
+avec
+du texte dedans
+voire du <strong>code HTML</strong>
