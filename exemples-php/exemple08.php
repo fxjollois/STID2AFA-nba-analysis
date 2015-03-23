@@ -11,7 +11,7 @@
 <?php
 	// Travail avec des fichiers texte (écriture et lecture)
 	// Ouverture d'un fichier texte et affichage du contenu
-	$fic = 'exemple08-a.txt';
+	$fic = 'fichiers/exemple08-a.txt';
 	if (file_exists($fic)) {
 		date_default_timezone_set("Europe/Paris");
 		echo "$fic a été accédé le : " . date("F d Y H:i:s.", fileatime($fic))."<br>";
@@ -44,7 +44,7 @@
 <hr>
 <h2>Si le fichier n'existe pas...</h2>
 <?php
-	$fic = 'exemple08-b.txt';
+	$fic = 'fichiers/exemple08-b.txt';
 	if (file_exists($fic)) {
 		print "Le fichier $fic existe. Voila son contenu : <hr>";
 		} 
@@ -55,9 +55,13 @@
 
 <hr>
 <h2>Ecriture dans un fichier</h2>
+<p>Pour pouvoir réaliser ceci, il faut changer les droits d'accès au répertoire contenant le script PHP, avec la commande (à faire en ligne de commande - à faire avec attention pour ne pas laisser l'accès à tous vos fichiers)</p>
+<pre>$chmod 777 repertoire</pre>
 <?php
 	$contenu = "Voici du contenu\n\nqu'on va mettre dans un fichier.";
-	$fic = 'exemple08-c.txt';
+	$fic = 'fichiers/exemple08-c.txt';
 	file_put_contents($fic, $contenu);
-	readfile($fic);
+	echo "<p>A-t'on réussi à le mettre ? Le contenu est </p>\n<p style = 'border: solid 1px black'>\n";
+	echo file_get_contents($fic);
+	echo "</p>";
 ?>

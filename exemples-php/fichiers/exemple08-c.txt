@@ -1,0 +1,3 @@
+Voici du contenu
+
+qu'on va mettre dans un fichier.
