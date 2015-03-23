@@ -15,7 +15,7 @@
 ?>
 <p>Matchs du <strong>
 <?php 
-	$date = $data["sports_content"]["sports_meta"]["date_time"];
+	$date = $data["sports_content"]["sports_meta"]["season_meta"]["calendar_date"];
 	$annee = substr($date, 0, 4);
 	$mois = substr($date, 4, 2);
 	$jour = substr($date, 6, 2);
