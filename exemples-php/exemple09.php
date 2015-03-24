@@ -4,7 +4,14 @@
 </head>
 <body>
 <h1>Neuvième test en PHP : Travail avec SQLite</h1>
+
 <?php
+
+	/* si le code ne fonctionne pas, faire dans un terminal : 
+		$ sudo apt-get install php5-sqlite
+		$ sudo /etc/init.d/apache2 restart
+	*/
+	
 	// Travail avec SQLite
 	// Le fichier doit être en r+w pour tous (666) et le répertoire dans lequel il est aussi (777 dans ce cas)
 	// récupération du jeu de données
