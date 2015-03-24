@@ -9,6 +9,7 @@
 	// Le fichier doit être en r+w pour tous (666) et le répertoire dans lequel il est aussi (777 dans ce cas)
 	// récupération du jeu de données
 	$db = new PDO('sqlite:bases/games.sqlite3');
+	echo "ok";
 	if ($db) {
 		// choix du jour ici
 		$jour = "20150312";

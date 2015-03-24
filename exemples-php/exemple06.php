@@ -38,7 +38,7 @@
 			$score = "<strong>".$scoreV."</strong>-".$scoreH;
 		}	
 		else {
-			$match = $nomV." @ <strong>".$nomH."<strong>";
+			$match = $nomV." @ <strong>".$nomH."</strong>";
 			$score = $scoreV."-<strong>".$scoreH."</strong>";
 		}
 		echo "<tr><td>".$match."</td><td>".$score."</td></tr>\n";

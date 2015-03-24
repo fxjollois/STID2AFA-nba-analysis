@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-	echo "<h1>Deuxième test en PHP - intégration dans du code HTML</h1>";
+	echo "<h1>Deuxième test en PHP - intégration dans du code HTML</h1>\n";
 ?>
 <p>Regardez le code source de la page.</p>
 </body>

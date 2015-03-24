@@ -1,6 +1,6 @@
 <?php
 	echo "Premier test en PHP"; // on peut aussi écrire avec 'print'
-	// on doit mettre le code PHP entre les balises "<?php" et "?>"
+	/* on doit mettre le code PHP entre les balises "<?php et ?>" */
 	
 	// et voila comment on peut faire un commentaire sur une ligne
 	
