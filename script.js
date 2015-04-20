@@ -38,26 +38,31 @@ function chargeDate() {
 							.html($('#inpDate').val())
 						)
 				.append($(document.createElement('ul')));
-			$.each(data.sports_content.games.game, 
-				function(i, m) {
-					$('nav:first ul')
-						.append($(document.createElement('li'))
-									.click(function() { infoMatch(date + '/' + m.id); })
-									.html(m.visitor.nickname+'@'+m.home.nickname)
-						)
-					});
+            if (data.sports_content.games !== "") {
+                $.each(data.sports_content.games.game, 
+                    function(i, m) {
+                        $('nav:first ul')
+                            .append($(document.createElement('li'))
+                                        .click(function() { infoMatch(date + '/' + m.id); })
+                                        .html(m.visitor.nickname+'@'+m.home.nickname)
+                            )
+                        });
 
-			$('#contenu')
-				.append($(document.createElement('div'))
-							.addClass("resume")
-							.append($(document.createElement('h2')).html('Résumé de la soirée'))
-							.append($(document.createElement('p'))
-										.html(data.sports_content.games.game.length + ' matchs, ' + 
-												$.map(data.sports_content.games.game, 
-														function(m) { return (parseInt(m.visitor.score)+parseInt(m.home.score)) })
-													.reduce(function(a, b) { return (a+b) }) + ' points marqués')
-									)
-						);
+                $('#contenu')
+                    .append($(document.createElement('div'))
+                                .addClass("resume")
+                                .append($(document.createElement('h2')).html('Résumé de la soirée'))
+                                .append($(document.createElement('p'))
+                                            .html(data.sports_content.games.game.length + ' matchs, ' + 
+                                                    $.map(data.sports_content.games.game, 
+                                                            function(m) { return (parseInt(m.visitor.score)+parseInt(m.home.score)) })
+                                                        .reduce(function(a, b) { return (a+b) }) + ' points marqués')
+                                        )
+                            );
+            }
+            else {
+                $('#contenu').html("Il n'y a pas eu de match pour la date indiquée.");
+            }
 		})
-		.fail(function(e) { $('#contenu').html("Il n'y a pas de match pour la date indiquée."); });
+		.fail(function(e) { $('#contenu').html("Cette date ne fait pas partie de la saison régulière 2014-2015."); });
 }
