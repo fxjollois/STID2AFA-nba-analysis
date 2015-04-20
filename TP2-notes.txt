@@ -1,0 +1,8 @@
+Menu : dans la balise nav et écrit comme suit
+---
+<div class = "date">13/04/2015</div>
+<ul>
+	<li onclick = "afficheMatch(jour, id)">match 13/04/2015
+	...
+</ul>
+---
