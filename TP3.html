@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<title>NBA Stat</title>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" type="text/css" href="TP3-style.css">
+		<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	</head>
+	<body onload = "chargeDate();">
+		<header>
+			<h1>NBA Stat</h1>
+			<div id = 'choixDate'>
+				Date : 
+				<input type="text" id="inpDate">
+				<input type="button" id="butDate" value="ok" onclick="chargeDate();">
+			</div>
+		</header>
+		<nav></nav>
+		<footer>
+			Merci à la NBA pour les données
+		</footer>
+		<div id = "contenu"></div>
+		<script src="TP3-script.js"></script>
+	</body>
+</html>
