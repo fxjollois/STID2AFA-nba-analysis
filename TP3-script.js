@@ -26,7 +26,7 @@ var teamColors = {
     "Jazz": "#091965",
     "Magic": "#0099F0",
     "Pacers": "#FDBB33",
-    "Sixers": "#ED174C",
+    "76ers": "#ED174C",
     "Thunder": "#007DC3",
     "Pelicans": "#002B5C"
     };
